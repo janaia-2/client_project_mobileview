@@ -1,0 +1,131 @@
+
+:root {
+    --primary-color: #00274C; /* UMich Blue */
+    --secondary-color: #FFCB05; /* UMich Maize */
+    --text-color: #000000;
+    --background-color: #ffffff;
+    --font-family: 'Arial', sans-serif;
+    --base-font-size: 1rem; /* ~16px default */
+  }
+
+  html {
+    font-size: 100%;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 1rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 8px;
+    z-index: 1000;
+    transition: top 0.3s ease;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+
+  header {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--secondary-color);
+    font-size: 100%;
+  }
+
+  h1 {
+    font-size: 125%;
+    font-weight: bold;
+  }
+
+  h2, h3, h4 {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    text-align: center;
+    font-size: 120%;
+    font-weight: bold;
+    color: var(--primary-color)
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  ul, ol {
+    text-align: center;
+  }
+
+  figure {
+    margin: 1rem 0;
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  nav a {
+    display: block;
+    padding: 0.75rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+
+  nav a.active, nav a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+  }
+
+  main {
+    padding: 1rem 1rem;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  footer {
+    background-color: #f4f4f4;
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  footer a {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+
+  *:focus {
+    outline: 2px dashed var(--primary-color);
+    outline-offset: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+
+    .gif-animation {
+      display: none;
+    }
+  }
